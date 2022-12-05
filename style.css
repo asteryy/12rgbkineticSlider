@@ -1,0 +1,34 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+#sec1{
+    width: 100%; height: 100vh;
+}
+#sec1 .container{}
+#sec1 .container .imgSlider{
+    position: absolute;
+    right: 0; top: 50px;
+    width: 70%; height: 70%;
+}
+#sec1 .container .imgSlider .slider{
+    position: relative;
+    width: 100%; height: 350px;
+    overflow: hidden;
+}
+#sec1 .container .imgSlider .slider canvas{
+    position: absolute;
+    top: 0; left: 0;
+    width: auto;
+    object-fit: contain !important;    /* 이미지를 온전하게 표현. 누구에게도 가려지지 않게 */
+}
+
+
+nav .main-nav{
+    position: absolute;
+    z-index: 100;     /* prev와 next버튼을 위로 올려서 클릭 가능 */
+    top: 50%; width: 100px; height: 30px;
+    background: #222; color: #fff;
+    text-align: center;
+}
+nav .main-nav.prev{left: -20px;}
+nav .main-nav.next{right: -20px;}
